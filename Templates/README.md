@@ -16,7 +16,6 @@ tags:
 | [[fleeting-note\|fleeting-note]] | 靈感速記 | `Notes/Fleeting/` |
 | [[permanent-note\|permanent-note]] | 永久筆記 | `Notes/Permanent/` |
 | [[clipping\|clipping]] | 網路剪藏 | `Clippings/` |
-| [[project\|project]] | 專案筆記 | `Projects/` |
 | [[area\|area]] | 領域筆記 | `Areas/` |
 | [[resource\|resource]] | 參考資料 | `Resources/` |
 | [[ai-prompt\|ai-prompt]] | AI Prompt | `AI/Prompts/` |
