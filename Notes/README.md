@@ -25,7 +25,7 @@ tags:
     ↓
 [Permanent Note] — 用自己的話重新表達、建立連結
     ↓
-連結至 Projects / Areas / Resources
+連結至 Areas / Resources
 ```
 
 [[00-Home|← 返回首頁]]

@@ -11,7 +11,6 @@ CollectObsidian/
 │   ├── Daily/              # 每日筆記
 │   ├── Fleeting/           # 靈感速記
 │   └── Permanent/          # 精煉永久筆記
-├── Projects/               # 專案管理
 ├── Areas/                  # 持續關注的領域
 ├── Resources/              # 主題參考資料
 ├── Archives/               # 封存（已完成或不活躍）
@@ -30,7 +29,6 @@ CollectObsidian/
 | `Notes/Daily/` | 每天的日誌、反思、快速記錄 |
 | `Notes/Fleeting/` | 尚未整理的靈感、想法片段 |
 | `Notes/Permanent/` | 深度整理後的「常青筆記」（Evergreen Notes）|
-| `Projects/` | 有開始與結束的目標導向工作 |
 | `Areas/` | 長期持續關注的責任範疇（如：健康、財務、學習）|
 | `Resources/` | 以主題分類的參考資料庫 |
 | `Archives/` | 封存舊有或已完成的內容 |

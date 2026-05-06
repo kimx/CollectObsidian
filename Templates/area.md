@@ -12,14 +12,6 @@ summary:
 
 <!-- 我在這個領域想要維持什麼樣的標準？ -->
 
-## 🗂️ 相關專案
-
-```dataview
-LIST
-FROM "Projects"
-WHERE area = "<% tp.file.title %>"
-```
-
 ## 📚 相關資源
 
 - 

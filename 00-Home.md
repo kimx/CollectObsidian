@@ -22,9 +22,8 @@ tags:
 - [[Notes/Fleeting/README|靈感速記（Fleeting Notes）]]
 - [[Notes/Permanent/README|永久筆記（Permanent Notes）]]
 
-## 🗂️ 專案與領域
+## 🗂️ 領域
 
-- [[Projects/README|專案（Projects）]]
 - [[Areas/README|領域（Areas）]]
 
 ## 📚 資源庫
@@ -53,7 +52,6 @@ tags:
 | `#status/done` | 已完成、精煉完畢 |
 | `#type/clipping` | 網路剪藏 |
 | `#type/note` | 個人筆記 |
-| `#type/project` | 專案筆記 |
 | `#type/resource` | 參考資料 |
 | `#type/ai-output` | AI 產出內容 |
 | `#area/work` | 工作領域 |
@@ -79,10 +77,3 @@ WHERE date >= date(today) - dur(7 days)
 SORT date DESC
 ```
 
-列出進行中的專案：
-```dataview
-TABLE status, due
-FROM "Projects"
-WHERE status != "done"
-SORT due ASC
-```
