@@ -14,7 +14,9 @@ tags:
 
 ## 📥 最近收集
 
-- [[Clippings/README|Clippings — 網路剪藏]]
+- [[Clippings/R-2026-05-06 給 AI 超能力？Superpowers 的設計與取捨]]
+- [[Clippings/R-2026-05-06 截圖軟體 ShareX]]
+- [[Clippings/R-2026-05-06 這 20 個提示詞教你深度使用 Claude：變身你的私人助理、教練與分析師]]
 
 ## 📝 筆記區
 
@@ -76,4 +78,3 @@ FROM "Clippings"
 WHERE date >= date(today) - dur(7 days)
 SORT date DESC
 ```
-
