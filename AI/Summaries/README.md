@@ -20,6 +20,10 @@ YYYY-MM-DD-<主題或來源>.md
 - `2026-05-06-AI知識庫架構總結.md`
 - `2026-05-06-Clippings-科技趨勢綜合報告.md`
 
+## 近期摘要
+
+- [[AI/Summaries/2026-05-07-Clippings-三篇剪藏綜合摘要|2026-05-07 三篇剪藏綜合摘要]]
+
 ## Frontmatter 規範
 
 ```yaml

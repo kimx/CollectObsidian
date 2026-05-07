@@ -32,6 +32,12 @@ Clippings/
 - 累積足夠剪藏後，可讓 AI 對同一主題的剪藏進行**綜合摘要**，輸出至 `AI/Summaries/`
 - 使用 Dataview 查詢此目錄下待閱讀的文章：
 
+## 近期剪藏
+
+- [[Clippings/R-2026-05-06 給 AI 超能力？Superpowers 的設計與取捨]]
+- [[Clippings/R-2026-05-06 截圖軟體 ShareX]]
+- [[Clippings/R-2026-05-06 這 20 個提示詞教你深度使用 Claude：變身你的私人助理、教練與分析師]]
+
 ```dataview
 TABLE source, summary, tags
 FROM "Clippings"
