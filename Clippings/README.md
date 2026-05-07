@@ -1,47 +1,42 @@
 ---
-title: Clippings — 網路剪藏
+title: Clippings — 網路剪藏暫存區
 tags:
   - MOC
   - type/clipping
 ---
 
-# 📎 Clippings — 網路剪藏
+# 📎 Clippings — 網路剪藏暫存區
 
-此目錄存放使用 [Obsidian Web Clipper](https://obsidian.md/clipper) 或其他工具擷取的網頁文章、參考連結。
+> ⚠️ 這是 **暫存區（Inbox）**，不是歸檔目錄。剪藏經 AI 整理後會搬出至 `Resources/`、`Notes/Permanent/` 等知識目錄。目標是保持此目錄盡量清空。
 
 ## 使用方式
 
 1. 安裝 **Obsidian Web Clipper** 瀏覽器擴充功能
 2. 瀏覽到感興趣的頁面，點擊擴充圖示進行剪藏
-3. 選擇儲存至 `Clippings/` 目錄
-4. 套用 `Templates/clipping` 模板
+3. 儲存至 `Clippings/` 目錄
+4. **AI Agent** 會自動整理、摘要，並搬移至對應的知識目錄
 
-## 建議子目錄（依主題分類）
+## 處理流程
 
 ```
-Clippings/
-├── Tech/         # 技術文章
-├── Business/     # 商業管理
-├── Science/      # 科學研究
-├── Life/         # 生活健康
-└── Misc/         # 其他
+Web Clipper 擷取 → Clippings/（暫存）
+                        ↓
+              AI Agent 整理：分析 → 摘要 → 歸類
+                        ↓
+           搬出至目的地：
+           ├── Resources/Tools/       工具類
+           ├── Resources/Concepts/    概念類
+           ├── Resources/Books/       書籍類
+           ├── Notes/Permanent/       可獨立概念
+           └── Archives/              低價值保留
 ```
 
-## AI 協作提示
-
-- 累積足夠剪藏後，可讓 AI 對同一主題的剪藏進行**綜合摘要**，輸出至 `AI/Summaries/`
-- 使用 Dataview 查詢此目錄下待閱讀的文章：
-
-## 近期剪藏
-
-- [[Clippings/R-2026-05-06 給 AI 超能力？Superpowers 的設計與取捨]]
-- [[Clippings/R-2026-05-06 截圖軟體 ShareX]]
-- [[Clippings/R-2026-05-06 這 20 個提示詞教你深度使用 Claude：變身你的私人助理、教練與分析師]]
+## 目前待處理
 
 ```dataview
-TABLE source, summary, tags
+TABLE summary, tags, date
 FROM "Clippings"
-WHERE !contains(tags, "status/done")
+WHERE file.name != "README"
 SORT date DESC
 ```
 

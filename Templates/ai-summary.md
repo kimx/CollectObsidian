@@ -4,6 +4,8 @@ date: <% tp.date.now("YYYY-MM-DD") %>
 ai_tool: 
 source_notes:
   - 
+topics:
+  - 
 tags:
   - type/ai-output
   - status/review

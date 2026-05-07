@@ -3,28 +3,41 @@ title: <% tp.file.title %>
 date: <% tp.date.now("YYYY-MM-DD") %>
 source: 
 author: 
+published: 
+topics:
+  - 
 tags:
   - type/clipping
   - status/draft
 summary: 
+key_points:
+  - 
+actionable: 
 ---
 
 # 📎 <% tp.file.title %>
 
-**來源：** 
-**作者：** 
-**擷取日期：** <% tp.date.now("YYYY-MM-DD") %>
+## 摘要
 
----
+> 
 
-## 重點摘要
+## 重點
 
 - 
 
-## 個人想法
+## 可行動事項
 
-> 
+- [ ] 
+
+## 原文整理
+
+<!-- 整理後的原文內容 -->
 
 ## 相關筆記
 
 - 
+
+## 來源
+
+- 原文：
+- 作者：
