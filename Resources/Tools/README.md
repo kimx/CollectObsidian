@@ -1,0 +1,46 @@
+---
+title: Tools — 工具與軟體使用筆記
+tags:
+  - MOC
+  - type/resource
+  - tools
+---
+
+# 🛠️ Tools — 工具與軟體使用筆記
+
+此目錄存放**工具介紹、軟體評測、使用教學**等實用參考資料。
+
+## 目的
+
+- 記錄好用的工具與軟體
+- 整理工具的核心功能與使用技巧
+- 作為工具選型的參考依據
+- 建立個人的工具箱清單
+
+## 收錄內容
+
+- 生產力工具（截圖、筆記、自動化等）
+- 開發工具（編輯器、CLI 工具、套件等）
+- 設計工具（繪圖、原型設計等）
+- 其他實用軟體
+
+## 工具列表
+
+### 生產力工具
+
+- [[2026-05-06 - ShareX 免費開源截圖工具]]
+
+## AI 協作提示
+
+- 讓 AI 從剪藏中提取工具的核心功能與使用場景
+- 讓 AI 比較同類型工具的優劣
+- 讓 AI 根據需求推薦適合的工具
+
+```dataview
+TABLE summary, tags, date
+FROM "Resources/Tools"
+WHERE file.name != "README"
+SORT date DESC
+```
+
+[[Resources/README|← 返回 Resources]] | [[00-Home|← 返回首頁]]

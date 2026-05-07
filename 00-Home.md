@@ -15,7 +15,7 @@ tags:
 ## 📥 最近收集
 
 - [[Clippings/R-2026-05-06 給 AI 超能力？Superpowers 的設計與取捨]]
-- [[Clippings/R-2026-05-06 截圖軟體 ShareX]]
+- [[Resources/Tools/2026-05-06 - ShareX 免費開源截圖工具]]
 - [[Clippings/R-2026-05-06 這 20 個提示詞教你深度使用 Claude：變身你的私人助理、教練與分析師]]
 
 ## 📝 筆記區
