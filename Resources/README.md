@@ -13,6 +13,7 @@ tags:
 
 ```
 Resources/
+├── AI/                # AI 主題、提示詞與 API 參考
 ├── Books/             # 書籍摘要與心得
 ├── Courses/           # 課程筆記
 ├── Tools/             # 工具與軟體使用筆記
