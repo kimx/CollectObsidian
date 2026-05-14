@@ -29,6 +29,8 @@ tags:
 ### 生產力工具
 
 - [[2026-05-06 - ShareX 免費開源截圖工具]]
+- [[2026-05-09 - SuperSplat 3D Gaussian Splat 編輯器]]
+- [[2026-05-12 - Obsidian AI 側邊欄與語義搜尋]]
 
 ## AI 協作提示
 
