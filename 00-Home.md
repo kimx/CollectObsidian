@@ -14,6 +14,7 @@ tags:
 
 ## 📥 最近收集
 
+- [[Resources/Tools/2026-05-15 - html-anything Agent HTML 生成工具]]
 - [[Resources/Tools/2026-05-12 - Obsidian AI 側邊欄與語義搜尋]]
 - [[Resources/AI/2026-05-09 - OpenAI 聊天完成與回應 API]]
 - [[Resources/Tools/2026-05-09 - SuperSplat 3D Gaussian Splat 編輯器]]
