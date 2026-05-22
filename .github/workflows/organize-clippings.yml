@@ -119,10 +119,12 @@ jobs:
             --jq '.data.repository.issue.id' 2>&1)
           echo "Issue node ID: $ISSUE_NODE_ID"
 
-          # 3. 指派給 copilot-swe-agent，並指定 custom agent
+          # 3. 指派給 copilot-swe-agent，並指定 custom instructions
+          CUSTOM_INSTRUCTIONS="請依照 .github/agents/knowledge.agent.md 定義的 7 步驟流程處理 Clippings/ 下的剪藏：1)識別未處理檔案 2)分析內容決定目標目錄 3)補齊 YAML frontmatter 4)正規化 Markdown 5)重新命名 6)搬移至目標目錄 7)更新 00-Home.md 與 README。最後建立繁體中文 commit message 的 Pull Request。"
+
           ASSIGN_RESULT=$(GH_TOKEN="$GH_PAT" gh api graphql \
             --header "$GQL_HEADER" \
-            --field "query=mutation { addAssigneesToAssignable(input: { assignableId: \"$ISSUE_NODE_ID\", assigneeIds: [\"$BOT_ID\"], agentAssignment: { targetRepositoryId: \"$REPO_ID\", baseRef: \"main\", customAgent: \".github/agents/knowledge.agent.md\" } }) { assignable { ... on Issue { number assignees(first:5) { nodes { login } } } } } }" 2>&1)
+            --field "query=mutation { addAssigneesToAssignable(input: { assignableId: \"$ISSUE_NODE_ID\", assigneeIds: [\"$BOT_ID\"], agentAssignment: { targetRepositoryId: \"$REPO_ID\", baseRef: \"main\", customInstructions: \"$CUSTOM_INSTRUCTIONS\" } }) { assignable { ... on Issue { number assignees(first:5) { nodes { login } } } } } }" 2>&1)
 
           echo "指派結果：$ASSIGN_RESULT"
           echo "$ASSIGN_RESULT" | jq -e '.data.addAssigneesToAssignable' > /dev/null \
