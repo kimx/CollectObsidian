@@ -40,8 +40,17 @@ jobs:
       - name: 建立整理任務 Issue
         if: steps.find_clippings.outputs.has_pending_files == 'true'
         env:
-          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          # 需要 PAT（Personal Access Token）才能指派 Issue 給 Copilot
+          # 請至 repo Settings > Secrets > Actions 新增名為 GH_PAT 的 secret
+          # PAT 需有 repo 範圍權限（repo:write 或 public_repo）
+          GH_TOKEN: ${{ secrets.GH_PAT }}
         run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::error::未設定 GH_PAT secret！"
+            echo "::error::請至 repo Settings > Secrets > Actions 新增 Personal Access Token，命名為 GH_PAT，需有 repo 權限。"
+            echo "::error::GITHUB_TOKEN 無法指派 Issue 給 Copilot，必須使用 PAT。"
+            exit 1
+          fi
           FILES="${{ steps.find_clippings.outputs.files }}"
           DATE="$(date +%Y-%m-%d)"
 
