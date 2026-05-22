@@ -83,14 +83,23 @@ jobs:
         if: steps.create_issue.outputs.issue_number != ''
         continue-on-error: true
         env:
-          GH_TOKEN: ${{ secrets.GH_PAT }}
+          GH_PAT: ${{ secrets.GH_PAT }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if [ -z "$GH_TOKEN" ]; then
-            echo "::warning::未設定 GH_PAT，跳過自動指派。請手動在 Issue 上指派給 Copilot，或至 repo Settings > Secrets > Actions 新增 GH_PAT（需 repo 範圍 PAT）。"
-            exit 0
+          ISSUE_NUM="${{ steps.create_issue.outputs.issue_number }}"
+
+          # 方法 1：嘗試用 GH_PAT 直接指派（需要 Classic PAT + repo 範圍）
+          if [ -n "$GH_PAT" ]; then
+            GH_TOKEN="$GH_PAT" gh issue edit "$ISSUE_NUM" \
+              --add-assignee "copilot" \
+              --repo "${{ github.repository }}" \
+              && echo "✅ 已成功指派給 Copilot" && exit 0 \
+              || echo "::warning::直接指派失敗，改用留言觸發..."
           fi
-          gh issue edit "${{ steps.create_issue.outputs.issue_number }}" \
-            --add-assignee "copilot" \
+
+          # 方法 2：在 Issue 留言 @copilot（使用 GITHUB_TOKEN 即可）
+          gh issue comment "$ISSUE_NUM" \
+            --body "@copilot 請依照 \`.github/agents/knowledge.agent.md\` 的完整流程處理 Clippings/ 中的待整理剪藏，並建立 Pull Request。" \
             --repo "${{ github.repository }}" \
-            && echo "✅ 已成功指派給 Copilot" \
-            || echo "::warning::指派給 Copilot 失敗（可能是 Copilot coding agent 尚未在此帳戶/組織啟用）。請至 Issue 手動指派。"
+            && echo "✅ 已留言 @copilot 觸發 agent" \
+            || echo "::warning::留言失敗，請手動至 Issue 指派給 Copilot。"
