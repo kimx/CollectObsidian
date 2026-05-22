@@ -14,6 +14,11 @@ tags:
 
 ## 📥 最近收集
 
+- [[Resources/Tools/2026-05-22 - Google AI Studio 網頁讀取實測]]
+- [[Resources/AI/2026-05-21 - Markdown 給 AI HTML 給人看]]
+- [[Resources/AI/2026-05-20 - Microsoft AI Agents 入門 12 課]]
+- [[Resources/AI/2026-05-20 - Microsoft Agent Framework 與 Skill 解耦]]
+- [[Resources/Tools/2026-05-20 - LINE 語音轉文字 Webhook 實作]]
 - [[Resources/Tools/2026-05-15 - html-anything Agent HTML 生成工具]]
 - [[Resources/Tools/2026-05-12 - Obsidian AI 側邊欄與語義搜尋]]
 - [[Resources/AI/2026-05-09 - OpenAI 聊天完成與回應 API]]
