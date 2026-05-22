@@ -39,22 +39,14 @@ jobs:
 
       - name: 建立整理任務 Issue
         if: steps.find_clippings.outputs.has_pending_files == 'true'
+        id: create_issue
         env:
-          # 需要 PAT（Personal Access Token）才能指派 Issue 給 Copilot
-          # 請至 repo Settings > Secrets > Actions 新增名為 GH_PAT 的 secret
-          # PAT 需有 repo 範圍權限（repo:write 或 public_repo）
-          GH_TOKEN: ${{ secrets.GH_PAT }}
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
-          if [ -z "$GH_TOKEN" ]; then
-            echo "::error::未設定 GH_PAT secret！"
-            echo "::error::請至 repo Settings > Secrets > Actions 新增 Personal Access Token，命名為 GH_PAT，需有 repo 權限。"
-            echo "::error::GITHUB_TOKEN 無法指派 Issue 給 Copilot，必須使用 PAT。"
-            exit 1
-          fi
           FILES="${{ steps.find_clippings.outputs.files }}"
           DATE="$(date +%Y-%m-%d)"
 
-          gh issue create \
+          ISSUE_URL=$(gh issue create \
             --title "整理剪藏：${DATE} 新增剪藏待處理" \
             --body "## 任務說明
 
@@ -80,5 +72,25 @@ jobs:
 
           - Commit message 使用繁體中文（例：\`整理：整理剪藏文章與補齊 metadata\`）
           - PR 描述依照 \`.github/agents/knowledge.agent.md\` 的 Pull Request Summary 格式" \
-            --assignee "copilot" \
-            --repo "${{ github.repository }}"
+            --repo "${{ github.repository }}")
+
+          echo "issue_url=$ISSUE_URL" >> "$GITHUB_OUTPUT"
+          ISSUE_NUMBER=$(echo "$ISSUE_URL" | grep -oE '[0-9]+$')
+          echo "issue_number=$ISSUE_NUMBER" >> "$GITHUB_OUTPUT"
+          echo "✅ Issue 建立成功：$ISSUE_URL"
+
+      - name: 指派 Issue 給 Copilot（需要 GH_PAT 與 Copilot coding agent）
+        if: steps.create_issue.outputs.issue_number != ''
+        continue-on-error: true
+        env:
+          GH_TOKEN: ${{ secrets.GH_PAT }}
+        run: |
+          if [ -z "$GH_TOKEN" ]; then
+            echo "::warning::未設定 GH_PAT，跳過自動指派。請手動在 Issue 上指派給 Copilot，或至 repo Settings > Secrets > Actions 新增 GH_PAT（需 repo 範圍 PAT）。"
+            exit 0
+          fi
+          gh issue edit "${{ steps.create_issue.outputs.issue_number }}" \
+            --add-assignee "copilot" \
+            --repo "${{ github.repository }}" \
+            && echo "✅ 已成功指派給 Copilot" \
+            || echo "::warning::指派給 Copilot 失敗（可能是 Copilot coding agent 尚未在此帳戶/組織啟用）。請至 Issue 手動指派。"
