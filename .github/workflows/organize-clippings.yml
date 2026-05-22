@@ -90,7 +90,6 @@ jobs:
           REPO_NAME: ${{ github.event.repository.name }}
         run: |
           ISSUE_NUM="${{ steps.create_issue.outputs.issue_number }}"
-          REPO="${{ github.repository }}"
           GQL_HEADER="GraphQL-Features: issues_copilot_assignment_api_support,coding_agent_model_selection"
 
           if [ -z "$GH_PAT" ]; then
@@ -98,46 +97,35 @@ jobs:
             exit 0
           fi
 
-          # 1. 取得 copilot-swe-agent 的 bot ID 和 repo node ID
+          # 1. 查詢 copilot-swe-agent bot ID 與 repo node ID
           QUERY_RESULT=$(GH_TOKEN="$GH_PAT" gh api graphql \
             --header "$GQL_HEADER" \
-            --field "query=query { repository(owner: \"$OWNER\", name: \"$REPO_NAME\") { id, suggestedActors(capabilities: [CAN_BE_ASSIGNED], first: 20) { nodes { login, __typename, ... on Bot { id }, ... on User { id } } } } }" \
-            2>&1)
+            --field "query=query { repository(owner: \"$OWNER\", name: \"$REPO_NAME\") { id suggestedActors(capabilities: [CAN_BE_ASSIGNED], first: 20) { nodes { login __typename ... on Bot { id } ... on User { id } } } } }" 2>&1)
 
-          echo "suggestedActors 查詢結果：$QUERY_RESULT"
+          echo "suggestedActors 結果：$QUERY_RESULT"
 
-          BOT_ID=$(echo "$QUERY_RESULT" | python3 -c "
-import sys, json
-data = json.load(sys.stdin)
-nodes = data.get('data', {}).get('repository', {}).get('suggestedActors', {}).get('nodes', [])
-bot = next((n for n in nodes if n.get('login') == 'copilot-swe-agent'), None)
-print(bot['id'] if bot else '')
-" 2>/dev/null || true)
-
-          REPO_ID=$(echo "$QUERY_RESULT" | python3 -c "
-import sys, json
-data = json.load(sys.stdin)
-print(data.get('data', {}).get('repository', {}).get('id', ''))
-" 2>/dev/null || true)
+          BOT_ID=$(echo "$QUERY_RESULT" | jq -r '.data.repository.suggestedActors.nodes[] | select(.login == "copilot-swe-agent") | .id' 2>/dev/null || true)
+          REPO_ID=$(echo "$QUERY_RESULT" | jq -r '.data.repository.id' 2>/dev/null || true)
 
           if [ -z "$BOT_ID" ]; then
-            echo "::warning::找不到 copilot-swe-agent（可能帳號未啟用 Copilot cloud agent）。"
+            echo "::warning::找不到 copilot-swe-agent，請確認帳號已啟用 Copilot cloud agent。"
             exit 0
           fi
-
-          echo "✅ 找到 copilot-swe-agent ID: $BOT_ID"
+          echo "✅ copilot-swe-agent ID: $BOT_ID，Repo ID: $REPO_ID"
 
           # 2. 取得 Issue node ID
           ISSUE_NODE_ID=$(GH_TOKEN="$GH_PAT" gh api graphql \
             --field "query=query { repository(owner: \"$OWNER\", name: \"$REPO_NAME\") { issue(number: $ISSUE_NUM) { id } } }" \
             --jq '.data.repository.issue.id' 2>&1)
-
           echo "Issue node ID: $ISSUE_NODE_ID"
 
-          # 3. 用 addAssigneesToAssignable 指派給 copilot-swe-agent（帶必要 header）
-          GH_TOKEN="$GH_PAT" gh api graphql \
+          # 3. 指派給 copilot-swe-agent，並指定 custom agent
+          ASSIGN_RESULT=$(GH_TOKEN="$GH_PAT" gh api graphql \
             --header "$GQL_HEADER" \
-            --field "query=mutation { addAssigneesToAssignable(input: { assignableId: \"$ISSUE_NODE_ID\", assigneeIds: [\"$BOT_ID\"], agentAssignment: { targetRepositoryId: \"$REPO_ID\", baseRef: \"main\", customAgent: \".github/agents/knowledge.agent.md\" } }) { assignable { ... on Issue { number assignees(first:5) { nodes { login } } } } } }" \
+            --field "query=mutation { addAssigneesToAssignable(input: { assignableId: \"$ISSUE_NODE_ID\", assigneeIds: [\"$BOT_ID\"], agentAssignment: { targetRepositoryId: \"$REPO_ID\", baseRef: \"main\", customAgent: \".github/agents/knowledge.agent.md\" } }) { assignable { ... on Issue { number assignees(first:5) { nodes { login } } } } } }" 2>&1)
+
+          echo "指派結果：$ASSIGN_RESULT"
+          echo "$ASSIGN_RESULT" | jq -e '.data.addAssigneesToAssignable' > /dev/null \
             && echo "✅ 成功指派給 Copilot coding agent" \
             || echo "::warning::GraphQL 指派失敗，請手動在 Issue 上指派給 Copilot。"
 
