@@ -16,29 +16,29 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 2
+        env:
+          FORCE_JAVASCRIPT_ACTIONS_TO_NODE24: true
 
-      - name: 找出新增的剪藏檔案
+      - name: 找出待處理的剪藏檔案
         id: find_clippings
         run: |
-          NEW_FILES=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- 'Clippings/' \
-            | grep '\.md$' | grep -v 'README\.md' || true)
+          # 掃描 Clippings/ 下所有 .md（排除 README.md），不管是新增或修改
+          PENDING_FILES=$(find Clippings/ -maxdepth 1 -name '*.md' ! -name 'README.md' 2>/dev/null || true)
 
-          if [ -n "$NEW_FILES" ]; then
-            echo "has_new_files=true" >> "$GITHUB_OUTPUT"
-            # Store file list safely as multiline output
+          if [ -n "$PENDING_FILES" ]; then
+            echo "has_pending_files=true" >> "$GITHUB_OUTPUT"
             {
               echo "files<<EOF"
-              echo "$NEW_FILES"
+              echo "$PENDING_FILES"
               echo "EOF"
             } >> "$GITHUB_OUTPUT"
           else
-            echo "has_new_files=false" >> "$GITHUB_OUTPUT"
+            echo "has_pending_files=false" >> "$GITHUB_OUTPUT"
+            echo "Clippings/ 目前沒有待處理的剪藏，略過。"
           fi
 
       - name: 建立整理任務 Issue
-        if: steps.find_clippings.outputs.has_new_files == 'true'
+        if: steps.find_clippings.outputs.has_pending_files == 'true'
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
