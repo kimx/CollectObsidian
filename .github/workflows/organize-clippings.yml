@@ -1,0 +1,75 @@
+name: 整理剪藏筆記
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'Clippings/**'
+
+jobs:
+  trigger-knowledge-agent:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      issues: write
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 2
+
+      - name: 找出新增的剪藏檔案
+        id: find_clippings
+        run: |
+          NEW_FILES=$(git diff --name-only --diff-filter=A HEAD~1 HEAD -- 'Clippings/' \
+            | grep '\.md$' | grep -v 'README\.md' || true)
+
+          if [ -n "$NEW_FILES" ]; then
+            echo "has_new_files=true" >> "$GITHUB_OUTPUT"
+            # Store file list safely as multiline output
+            {
+              echo "files<<EOF"
+              echo "$NEW_FILES"
+              echo "EOF"
+            } >> "$GITHUB_OUTPUT"
+          else
+            echo "has_new_files=false" >> "$GITHUB_OUTPUT"
+          fi
+
+      - name: 建立整理任務 Issue
+        if: steps.find_clippings.outputs.has_new_files == 'true'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: |
+          FILES="${{ steps.find_clippings.outputs.files }}"
+          DATE="$(date +%Y-%m-%d)"
+
+          gh issue create \
+            --title "整理剪藏：${DATE} 新增剪藏待處理" \
+            --body "## 任務說明
+
+          偵測到 \`Clippings/\` 有新增剪藏，請依照 \`.github/agents/knowledge.agent.md\` 的完整流程（7 個步驟）逐一處理以下檔案，並建立 Pull Request。
+
+          ## 待處理檔案
+
+          \`\`\`
+          ${FILES}
+          \`\`\`
+
+          ## 處理流程（請勿跳過任何步驟）
+
+          1. 識別未處理的剪藏
+          2. 分析內容、決定目標目錄（參照路由表）
+          3. 補齊 YAML frontmatter（title, date, source, summary, key_points, tags, actionable）
+          4. 正規化 Markdown 結構
+          5. 重新命名檔案（\`YYYY-MM-DD - 中文標題.md\`）
+          6. 將檔案從 \`Clippings/\` 搬移至正確目標目錄
+          7. 更新 \`00-Home.md\` 與目標目錄的 \`README.md\`
+
+          ## 完成後
+
+          - Commit message 使用繁體中文（例：\`整理：整理剪藏文章與補齊 metadata\`）
+          - PR 描述依照 \`.github/agents/knowledge.agent.md\` 的 Pull Request Summary 格式" \
+            --assignee "copilot" \
+            --repo "${{ github.repository }}"
