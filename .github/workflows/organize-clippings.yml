@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'Clippings/**'
+  workflow_dispatch:
 
 jobs:
   trigger-knowledge-agent:
