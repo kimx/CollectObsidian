@@ -14,6 +14,7 @@ tags:
 
 ## 📥 最近收集
 
+- [[Resources/AI/2026-05-22 - Anthropic 多晶片算力佈局]]
 - [[Resources/Tools/2026-05-22 - Google AI Studio 網頁讀取實測]]
 - [[Resources/AI/2026-05-21 - Markdown 給 AI HTML 給人看]]
 - [[Resources/AI/2026-05-20 - Microsoft AI Agents 入門 12 課]]
