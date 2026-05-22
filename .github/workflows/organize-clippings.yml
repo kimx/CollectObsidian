@@ -87,19 +87,35 @@ jobs:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         run: |
           ISSUE_NUM="${{ steps.create_issue.outputs.issue_number }}"
+          REPO="${{ github.repository }}"
 
-          # 方法 1：嘗試用 GH_PAT 直接指派（需要 Classic PAT + repo 範圍）
+          # 方法 1a：用 REST API 指派（比 GraphQL 更相容 fine-grained PAT）
           if [ -n "$GH_PAT" ]; then
+            REST_RESULT=$(curl -s -o /tmp/assign_resp.json -w "%{http_code}" \
+              -X POST \
+              -H "Authorization: token $GH_PAT" \
+              -H "Accept: application/vnd.github.v3+json" \
+              "https://api.github.com/repos/${REPO}/issues/${ISSUE_NUM}/assignees" \
+              -d '{"assignees":["copilot"]}')
+            if [ "$REST_RESULT" = "201" ]; then
+              echo "✅ REST API 指派成功" && exit 0
+            else
+              echo "REST API 回傳: $REST_RESULT"
+              cat /tmp/assign_resp.json
+            fi
+
+            # 方法 1b：用 gh CLI GraphQL 指派（需要 Classic PAT）
             GH_TOKEN="$GH_PAT" gh issue edit "$ISSUE_NUM" \
               --add-assignee "copilot" \
-              --repo "${{ github.repository }}" \
-              && echo "✅ 已成功指派給 Copilot" && exit 0 \
+              --repo "$REPO" \
+              && echo "✅ gh CLI 指派成功" && exit 0 \
               || echo "::warning::直接指派失敗，改用留言觸發..."
           fi
 
           # 方法 2：在 Issue 留言 @copilot（使用 GITHUB_TOKEN 即可）
           gh issue comment "$ISSUE_NUM" \
             --body "@copilot 請依照 \`.github/agents/knowledge.agent.md\` 的完整流程處理 Clippings/ 中的待整理剪藏，並建立 Pull Request。" \
-            --repo "${{ github.repository }}" \
+            --repo "$REPO" \
             && echo "✅ 已留言 @copilot 觸發 agent" \
             || echo "::warning::留言失敗，請手動至 Issue 指派給 Copilot。"
+
