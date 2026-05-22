@@ -15,5 +15,8 @@ tags:
 - [[2026-05-06 - 20 個 Claude 提示詞]]
 - [[2026-05-07 - Claude／GPT 反討好提示詞]]
 - [[2026-05-09 - OpenAI 聊天完成與回應 API]]
+- [[2026-05-20 - Microsoft AI Agents 入門 12 課]]
+- [[2026-05-20 - Microsoft Agent Framework 與 Skill 解耦]]
+- [[2026-05-21 - Markdown 給 AI HTML 給人看]]
 
 [[Resources/README|← 返回 Resources]] | [[00-Home|← 返回首頁]]
