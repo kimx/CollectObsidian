@@ -1,31 +1,28 @@
 ---
-title: Resources — 主題參考資料
+title: Resources — AI 整理後參考資源
 tags:
   - MOC
   - type/resource
 ---
 
-# 📚 Resources — 主題參考資料
+# Resources — AI 整理後參考資源
 
-此目錄存放**以主題分類的參考資料**，不限於個人想法，可包含書籍筆記、研究摘要、教學資料等。
+此目錄存放 AI 從 `Clippings/` 整理後產生的參考資源。內容應可回查、可引用，並保留原始來源。
 
-## 建議子目錄
+## 目前子目錄
 
-```
+```text
 Resources/
-├── AI/                # AI 主題、提示詞與 API 參考
-├── Books/             # 書籍摘要與心得
-├── Courses/           # 課程筆記
-├── Tools/             # 工具與軟體使用筆記
-├── Concepts/          # 概念解釋（術語表）
-└── Databases/         # 資料庫（人物、地點、組織等）
+├── AI/                # AI 主題、模型、提示詞與工具鏈相關資料
+└── Tools/             # 工具與軟體使用筆記
 ```
 
-## AI 協作提示
+## 筆記要求
 
-- 讓 AI 根據多本書的筆記進行**跨書主題比較**
-- 讓 AI 從 Clippings 中提取重點，自動生成 Resources 筆記
-- 讓 AI 建立 Concepts 術語表，標準化知識庫中的用語
+- 保留 `source` 或原文連結。
+- 用 `summary` 說明這份資源的核心價值。
+- 重點整理以可掃讀、可回查為主。
+- 不確定的內容標示「待確認」。
 
 ```dataview
 TABLE summary, tags, file.mtime AS "最後更新"

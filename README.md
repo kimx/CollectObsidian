@@ -1,53 +1,36 @@
 # CollectObsidian
-使用 Obsidian 收集筆記，並規劃一個 AI 可協助的知識庫架構。
+
+使用 Obsidian 收集資料，交由 AI 整理成可回查的參考資源。
 
 ## 知識庫目錄結構
 
-```
+```text
 CollectObsidian/
-├── 00-Home.md              # 主儀表板（Map of Content）
-├── Clippings/              # 網路剪藏（Web Clippings）
-├── Notes/                  # 個人筆記
-│   ├── Daily/              # 每日筆記
-│   ├── Fleeting/           # 靈感速記
-│   └── Permanent/          # 精煉永久筆記
-├── Areas/                  # 持續關注的領域
-├── Resources/              # 主題參考資料
-├── Archives/               # 封存（已完成或不活躍）
-├── AI/                     # AI 協作區
-│   ├── Prompts/            # Prompt 模板庫
-│   ├── Summaries/          # AI 摘要輸出
-│   └── Conversations/      # AI 對話紀錄
-└── Templates/              # 筆記模板
+├── 00-Home.md              # 知識庫入口
+├── AI/                     # 給 AI 讀的整理規則與操作說明
+├── Clippings/              # 原始收集區
+├── Resources/              # AI 整理後的參考資源
+└── Templates/              # 必要樣板
 ```
 
 ## 各目錄說明
 
 | 目錄 | 用途 |
 |------|------|
-| `Clippings/` | 使用瀏覽器插件（如 Obsidian Web Clipper）擷取的網頁文章 |
-| `Notes/Daily/` | 每天的日誌、反思、快速記錄 |
-| `Notes/Fleeting/` | 尚未整理的靈感、想法片段 |
-| `Notes/Permanent/` | 深度整理後的「常青筆記」（Evergreen Notes）|
-| `Areas/` | 長期持續關注的責任範疇（如：健康、財務、學習）|
-| `Resources/` | 以主題分類的參考資料庫 |
-| `Archives/` | 封存舊有或已完成的內容 |
-| `AI/Prompts/` | 可重複使用的 AI Prompt 模板 |
-| `AI/Summaries/` | AI 對長文、剪藏的自動摘要 |
-| `AI/Conversations/` | 與 AI 工具的對話紀錄與成果 |
-| `Templates/` | Obsidian 筆記模板（可搭配 Templater 插件使用）|
+| `AI/` | 放給 AI 讀的工作說明、整理規則與輸出要求 |
+| `Clippings/` | 使用瀏覽器插件或手動收集的原始資料 |
+| `Resources/` | AI 整理、摘要、歸類後的參考資源 |
+| `Templates/` | Obsidian 建立剪藏與資源筆記時需要的樣板 |
 
-## AI 協作設計原則
+## AI 整理原則
 
-1. **標籤（Tags）統一** — 使用 `#status/draft`、`#status/review`、`#status/done` 管理筆記狀態，讓 AI 可快速篩選需要處理的內容。
-2. **YAML Frontmatter** — 每則筆記均包含結構化 Frontmatter（`title`、`date`、`tags`、`source`），方便 AI 解析與索引。
-3. **雙向連結（Backlinks）** — 透過 `[[Wiki Link]]` 建立知識網絡，輔助 AI 進行關聯推理。
-4. **摘要欄位（summary）** — Permanent Notes 與 Resources 包含 `summary` 欄位，方便 AI 快速理解筆記主旨。
-5. **MOC（Map of Content）** — `00-Home.md` 作為全庫入口，AI 可從此出發導航整個知識庫。
+1. **先收集，再整理**：原始資料先進 `Clippings/`，整理後再移入 `Resources/`。
+2. **保留來源**：每則資源需保留 `source`、`date`、`tags` 與 `summary`。
+3. **輸出可回查**：AI 整理後的內容要能作為日後查詢、引用與延伸閱讀的參考。
+4. **避免過度分類**：目前只維持必要資料夾，不新增 Notes、Areas、Archives 等分類。
 
 ## 推薦 Obsidian 插件
 
-- **Templater** — 自動套用筆記模板
-- **Dataview** — SQL 式查詢筆記資料
-- **Obsidian Web Clipper** — 網頁剪藏至 Clippings
-- **Smart Connections** — AI 語意搜尋與關聯筆記
+- **Templater** — 套用 `Templates/` 中的樣板
+- **Dataview** — 查詢 Clippings 與 Resources
+- **Obsidian Web Clipper** — 網頁剪藏至 `Clippings/`

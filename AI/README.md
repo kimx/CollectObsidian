@@ -1,40 +1,36 @@
 ---
-title: AI 協作區
+title: AI 說明
 tags:
   - MOC
   - AI
 ---
 
-# 🤖 AI — AI 協作區
+# AI — 給 AI 讀的整理規則
 
-此目錄是與 AI 工具互動的核心樞紐，分為三個子目錄：
+此目錄只放 AI 執行整理時需要先閱讀的說明。整理工作請遵守以下規則。
 
-| 子目錄 | 說明 |
-|--------|------|
-| `Prompts/` | 可重複使用的 Prompt 模板庫 |
-| `Summaries/` | AI 對筆記、剪藏的摘要輸出 |
-| `Conversations/` | 與 AI 工具的完整對話紀錄 |
+## 目錄角色
 
-## AI 使用場景
+| 目錄 | 角色 |
+|------|------|
+| `AI/` | 給 AI 讀的規則與操作說明 |
+| `Clippings/` | 原始收集區，內容可能粗糙、未整理 |
+| `Resources/` | AI 整理後的參考資源 |
+| `Templates/` | 建立剪藏與資源筆記時使用的樣板 |
 
-### 知識整理
-- 對 `Clippings/` 中的文章進行**自動摘要**
-- 整合多篇筆記，產生**主題綜合報告**
-- 從雜亂的 Fleeting Notes 提取重點，協助寫成 Permanent Notes
+## 整理流程
 
-### 學習輔助
-- 對 `Resources/Books/` 的書摘提問、測驗
-- 解釋筆記中不理解的概念
-- 根據筆記內容產生**學習計畫**
+1. 從 `Clippings/` 讀取待整理內容。
+2. 擷取標題、來源、日期、重點、摘要與可用標籤。
+3. 依主題放入 `Resources/` 既有子目錄；沒有合適子目錄時先放在 `Resources/` 根目錄。
+4. 整理後的筆記需保留原始來源連結與必要脈絡。
+5. 不新增 `Notes/`、`Areas/`、`Archives/` 等資料夾。
 
-### 寫作輔助
-- 以筆記庫為素材，協助起草文章、報告
-- 優化已有文字的表達方式
+## 輸出要求
 
-## 建議工具
-
-- **ChatGPT / Claude / Gemini** — 對話式 AI
-- **Obsidian Smart Connections** — 語意搜尋與關聯推薦
-- **Obsidian Copilot** — 直接在 Obsidian 內使用 AI
+- 使用繁體中文整理。
+- Frontmatter 至少包含 `title`、`date`、`tags`、`summary`、`source`。
+- 摘要要短，重點要可回查。
+- 不確定的資訊標示為「待確認」，不要臆測。
 
 [[00-Home|← 返回首頁]]

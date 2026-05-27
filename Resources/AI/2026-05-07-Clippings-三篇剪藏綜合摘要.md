@@ -46,5 +46,5 @@ summary: 整理 AI 開發流程、提示詞實務與 ShareX 工具定位的重�
 
 ## 相關筆記
 
-- [[AI/Summaries/README|AI Summaries — AI 摘要輸出]]
-- [[Clippings/README|Clippings — 網路剪藏]]
+- [[Resources/AI/README|AI — AI 主題資源]]
+- [[Clippings/README|Clippings — 原始收集區]]
