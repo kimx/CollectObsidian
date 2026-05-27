@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Clippings/R-2026-05-22 Anthropic想租用微軟Maia 200晶片群！扛著3,300億鎂帳單，不把算力全押Nvidia.md",
+                "file": "Clippings/R-2026-05-27 一個 AI 助手打趴整套 Office 軟體！超強 Codex 從表格簡報、合併列印、架設網站全部一手包辦！.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "R-2026-05-22 Anthropic想租用微軟Maia 200晶片群！扛著3,300億鎂帳單，不把算力全押Nvidia"
+              "title": "R-2026-05-27 一個 AI 助手打趴整套 Office 軟體！超強 Codex 從表格簡報、合併列印、架設網站全部一手包辦！"
             }
           }
         ]
@@ -164,13 +164,23 @@
               "icon": "lucide-list",
               "title": "README 的大綱"
             }
+          },
+          {
+            "id": "93ec4081413d1a7b",
+            "type": "leaf",
+            "state": {
+              "type": "git-view",
+              "state": {},
+              "icon": "git-pull-request",
+              "title": "Source Control"
+            }
           }
-        ]
+        ],
+        "currentTab": 5
       }
     ],
     "direction": "horizontal",
-    "width": 300,
-    "collapsed": true
+    "width": 300
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -180,11 +190,14 @@
       "daily-notes:開啟今天的每日筆記": false,
       "templates:插入模板": false,
       "command-palette:開啟命令面板": false,
-      "bases:建立新的 base": false
+      "bases:建立新的 base": false,
+      "obsidian-git:Open Git source control": false
     }
   },
   "active": "29b1f239090a1aa3",
   "lastOpenFiles": [
+    "Clippings/R-2026-05-23 Docker 從入門到實踐 - Docker 從入門到實踐.md",
+    "Clippings/R-2026-05-27 一個 AI 助手打趴整套 Office 軟體！超強 Codex 從表格簡報、合併列印、架設網站全部一手包辦！.md",
     "Clippings/R-2026-05-22 Anthropic想租用微軟Maia 200晶片群！扛著3,300億鎂帳單，不把算力全押Nvidia.md",
     "Clippings/R-2026-05-21 (1) 愛好 AI 工程部落格 - 📌 善用 HTML 輸出 Markdown 給 AI 讀，HTML 給人類看Anthropic.md",
     "Clippings/R-2026-05-22 Gemini 不肯上網？用 Google AI Studio 就對了-黑暗執行緒.md",
@@ -216,8 +229,6 @@
     "Clippings/R-2026-05-06 這 20 個提示詞教你深度使用 Claude：變身你的私人助理、教練與分析師.md",
     "Clippings/R-2026-05-06 給 AI 超能力？Superpowers 的設計與取捨.md",
     "Clippings/Untitled.md",
-    "Clippings/R-2026-05-06T093028+0800 這 20 個提示詞教你深度使用 Claude：變身你的私人助理、教練與分析師.md",
-    "Clippings/給 AI 超能力？Superpowers 的設計與取捨.md",
-    "Clippings/這 20 個提示詞教你深度使用 Claude：變身你的私人助理、教練與分析師.md"
+    "Clippings/R-2026-05-06T093028+0800 這 20 個提示詞教你深度使用 Claude：變身你的私人助理、教練與分析師.md"
   ]
 }
