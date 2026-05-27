@@ -14,6 +14,8 @@ tags:
 
 ## 📥 最近收集
 
+- [[Resources/AI/2026-05-27 - Codex 一手包辦辦公流程自動化]]
+- [[Resources/Tools/2026-05-23 - Docker 從入門到實踐]]
 - [[Resources/AI/2026-05-22 - Anthropic 多晶片算力佈局]]
 - [[Resources/Tools/2026-05-22 - Google AI Studio 網頁讀取實測]]
 - [[Resources/AI/2026-05-21 - Markdown 給 AI HTML 給人看]]
@@ -22,8 +24,6 @@ tags:
 - [[Resources/Tools/2026-05-20 - LINE 語音轉文字 Webhook 實作]]
 - [[Resources/Tools/2026-05-15 - html-anything Agent HTML 生成工具]]
 - [[Resources/Tools/2026-05-12 - Obsidian AI 側邊欄與語義搜尋]]
-- [[Resources/AI/2026-05-09 - OpenAI 聊天完成與回應 API]]
-- [[Resources/Tools/2026-05-09 - SuperSplat 3D Gaussian Splat 編輯器]]
 
 ## 📝 筆記區
 
