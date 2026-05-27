@@ -35,6 +35,7 @@ tags:
 - [[2026-05-20 - LINE 語音轉文字 Webhook 實作]]
 - [[2026-05-22 - Google AI Studio 網頁讀取實測]]
 - [[2026-05-23 - Docker 從入門到實踐]]
+- [[2026-05-27 - CodeGraph 降低 AI 寫程式 Token 消耗]]
 
 ## AI 協作提示
 
