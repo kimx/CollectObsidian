@@ -9,6 +9,7 @@ tags:
   - type/clipping
   - status/processed
   - type/resource
+
   - developer-tools
   - token-optimization
 summary: "CodeGraph 透過 AST 索引與檔案監控，讓 LLM 在查詢程式碼時可減少上下文傳輸並顯著降低 Token 消耗。"
@@ -24,6 +25,7 @@ actionable: "在常用專案安裝並初始化 CodeGraph，量測導入前後同
 # 📎 CodeGraph 降低 AI 寫程式 Token 消耗
 
 ## 摘要
+
 
 > CodeGraph 是面向 AI 協作開發的程式碼索引工具，透過 AST 建模、增量更新與 LLM 文件整合，協助在大型專案中降低 Token 負擔並提升查詢效率。
 
