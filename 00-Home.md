@@ -23,8 +23,9 @@ SORT date DESC
 
 ## 最近整理
 
+
+- [[Resources/AI/2026-05-27 - Taste Skill 讓 AI 產生更有質感介面]]
 - [[Resources/Tools/2026-05-27 - CodeGraph 降低 AI 寫程式 Token 消耗]]
-- [[Resources/AI/2026-05-27 - Taste-Skill 提升 AI 介面設計品味]]
 - [[Resources/AI/2026-05-27 - Codex 一手包辦辦公流程自動化]]
 - [[Resources/Tools/2026-05-23 - Docker 從入門到實踐]]
 - [[Resources/AI/2026-05-22 - Anthropic 多晶片算力佈局]]

@@ -9,43 +9,49 @@ tags:
   - type/clipping
   - status/processed
   - type/resource
-  - tools
-summary: "CodeGraph 透過程式碼圖譜與上下文壓縮，協助 AI coding 任務降低 Token 消耗與成本。"
+
+  - developer-tools
+  - token-optimization
+summary: "CodeGraph 透過 AST 索引與檔案監控，讓 LLM 在查詢程式碼時可減少上下文傳輸並顯著降低 Token 消耗。"
 key_points:
-  - "導入後可減少不必要上下文傳輸，降低 Token 使用量"
-  - "以圖譜方式整理程式關聯，提升 AI 對專案脈絡的掌握"
-  - "適合長對話或大型專案，減少因 Token 耗盡造成的中斷"
-  - "可透過 npx 指令快速安裝並開始測試"
-actionable: "在一個常用專案試跑 CodeGraph，記錄導入前後 Token 用量與完成時間差異。"
+  - "掃描本地程式碼並建立 AST 索引資料庫，加速函式與變數定位"
+  - "具備檔案變更監控機制，可自動同步更新索引"
+  - "可初始化 .codegraph 設定並產出對應 LLM 參考文件"
+  - "安裝與初始化流程簡單，適合快速導入現有專案"
+  - "實測案例宣稱可節省約 80% 以上 Token 成本"
+actionable: "在常用專案安裝並初始化 CodeGraph，量測導入前後同任務的 Token 使用差異。"
 ---
 
 # 📎 CodeGraph 降低 AI 寫程式 Token 消耗
 
 ## 摘要
 
-> 文章聚焦 AI 寫程式常見的 Token 焦慮，介紹 CodeGraph 如何在實務中減少上下文成本，讓開發流程更穩定且可持續。
+
+> CodeGraph 是面向 AI 協作開發的程式碼索引工具，透過 AST 建模、增量更新與 LLM 文件整合，協助在大型專案中降低 Token 負擔並提升查詢效率。
 
 ## 重點
 
-- 以程式碼關聯圖方式提供 AI 更精準的上下文
-- 降低冗餘資訊傳遞，減少 Token 消耗與成本
-- 長流程開發時可降低中途中斷與重新說明的負擔
-- 可透過 `npx @colbymchenry/codegraph` 快速啟用測試
+- 先掃描程式碼建立 AST 索引，讓模型可精準定位符號與關聯。
+- 透過檔案系統監控自動更新資料，不需反覆全量重建。
+- 初始化後可生成 LLM 參考設定，讓 AI 在需要時主動走查詢流程。
+- 對日常「找函式、找變數、找相依」等場景有直接幫助。
+- 文章案例顯示在特定任務下可顯著降低 Token 消耗。
 
 ## 可行動事項
 
-- [ ] 在現有專案導入 CodeGraph，比較同一任務的 Token 成本與交付效率。
+- [ ] 在一個中大型程式庫導入 CodeGraph，記錄查詢速度與 Token 成本變化。
 
 ## 原文整理
 
-- 文章指出 AI coding 雖提升效率，但 Token 花費已成新的實務痛點。
-- CodeGraph 主打節省約 80% Token，核心概念是優化專案脈絡提供方式。
-- 實作門檻低，可先以 CLI 方式快速導入並觀察成效。
+- 文章指出 AI 輔助開發雖提升效率，但 Token 成本逐漸成為新瓶頸。
+- CodeGraph 的核心作法是先建索引、後查詢，避免每次都傳遞大量上下文。
+- 工具支援背景監測與資料同步，降低維護心智負擔。
+- 導入流程包含 `npx @colbymchenry/codegraph` 與 `codegraph init -i` 兩步。
 
 ## 相關筆記
 
-- [[Resources/Tools/2026-05-12 - Obsidian AI 側邊欄與語義搜尋]]
-- [[Resources/AI/2026-05-27 - Codex 一手包辦辦公流程自動化]]
+- [[Resources/Tools/2026-05-23 - Docker 從入門到實踐]]
+- [[Resources/AI/2026-05-27 - Taste Skill 讓 AI 產生更有質感介面]]
 
 ## 來源
 
