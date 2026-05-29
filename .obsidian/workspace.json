@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Clippings/R-2026-05-27 CodeGraph - AI 寫程式省80% Token 的好東東.md",
+                "file": "Clippings/R-2026-05-29 一人公司、零員工、AI Agents： 2 個月談下超過 400 萬台幣開發合約.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "R-2026-05-27 CodeGraph - AI 寫程式省80% Token 的好東東"
+              "title": "R-2026-05-29 一人公司、零員工、AI Agents： 2 個月談下超過 400 萬台幣開發合約"
             }
           }
         ]
@@ -196,8 +196,12 @@
   },
   "active": "0d919fcdb549cb39",
   "lastOpenFiles": [
-    "Clippings/R-2026-05-27 Leonxlnxtaste-skill Taste-Skill - gives your AI good taste. stops the AI from generating boring, generic slop.md",
+    "Clippings/R-2026-05-29 一人公司、零員工、AI Agents： 2 個月談下超過 400 萬台幣開發合約.md",
     "Clippings/R-2026-05-27 CodeGraph - AI 寫程式省80% Token 的好東東.md",
+    "Resources/Tools/2026-05-27 - CodeGraph 降低 AI 寫程式 Token 消耗.md",
+    "Resources/AI/2026-05-27 - Taste-Skill 提升 AI 介面設計品味.md",
+    "Resources/AI/2026-05-27 - Taste Skill 讓 AI 產生更有質感介面.md",
+    "Clippings/R-2026-05-27 Leonxlnxtaste-skill Taste-Skill - gives your AI good taste. stops the AI from generating boring, generic slop.md",
     "conflict-files-obsidian-git.md",
     "Resources/Tools/2026-05-23 - Docker 從入門到實踐.md",
     "Resources/AI/2026-05-27 - Codex 一手包辦辦公流程自動化.md",
@@ -225,10 +229,6 @@
     "Clippings/Coding/README.md",
     "Clippings/Coding",
     "Clippings/AI/README.md",
-    "Clippings/AI",
-    "AI/Summaries/2026-05-07-Clippings-三篇剪藏綜合摘要.md",
-    "Templates/ai-summary.md",
-    "00-Home.md",
-    "Clippings/R-2026-05-06 截圖軟體 ShareX.md"
+    "Clippings/AI"
   ]
 }
