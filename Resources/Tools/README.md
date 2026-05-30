@@ -28,7 +28,8 @@ tags:
 
 ### 生產力工具
 
-- [[2026-05-30 - Obsidian Digital Garden 外掛架站指南]]
+
+- [[2026-05-30 - Obsidian Digital Garden 建站插件]]
 - [[2026-05-06 - ShareX 免費開源截圖工具]]
 - [[2026-05-09 - SuperSplat 3D Gaussian Splat 編輯器]]
 - [[2026-05-12 - Obsidian AI 側邊欄與語義搜尋]]
