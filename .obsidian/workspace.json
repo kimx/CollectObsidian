@@ -11,14 +11,10 @@
             "id": "0d919fcdb549cb39",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Clippings/R-2026-05-29 一人公司、零員工、AI Agents： 2 個月談下超過 400 萬台幣開發合約.md",
-                "mode": "source",
-                "source": false
-              },
+              "type": "empty",
+              "state": {},
               "icon": "lucide-file",
-              "title": "R-2026-05-29 一人公司、零員工、AI Agents： 2 個月談下超過 400 萬台幣開發合約"
+              "title": "新分頁"
             }
           }
         ]
@@ -194,9 +190,13 @@
       "obsidian-git:Open Git source control": false
     }
   },
-  "active": "0d919fcdb549cb39",
+  "active": "93ec4081413d1a7b",
   "lastOpenFiles": [
+    "Resources/Tools/2026-05-30 - Obsidian Digital Garden 建站插件.md",
+    "Resources/Tools/2026-05-30 - Obsidian Digital Garden 外掛架站指南.md",
+    "Resources/AI/2026-05-29 - 一人公司、零員工、AI Agents：2 個月談下超過 400 萬台幣開發合約.md",
     "Clippings/R-2026-05-29 一人公司、零員工、AI Agents： 2 個月談下超過 400 萬台幣開發合約.md",
+    "Clippings/R-2026-05-30 oleeskildobsidian-digital-garden.md",
     "Clippings/R-2026-05-27 CodeGraph - AI 寫程式省80% Token 的好東東.md",
     "Resources/Tools/2026-05-27 - CodeGraph 降低 AI 寫程式 Token 消耗.md",
     "Resources/AI/2026-05-27 - Taste-Skill 提升 AI 介面設計品味.md",
@@ -222,13 +222,9 @@
     "Clippings/Learning",
     "Clippings/Business/README.md",
     "Clippings/Business",
-    "Clippings/Productivity/README.md",
     "Clippings/Productivity",
-    "Clippings/Dev-Tools/README.md",
     "Clippings/Dev-Tools",
-    "Clippings/Coding/README.md",
     "Clippings/Coding",
-    "Clippings/AI/README.md",
     "Clippings/AI"
   ]
 }
