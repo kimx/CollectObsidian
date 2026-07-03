@@ -29,6 +29,9 @@ tags:
 ### 生產力工具
 
 
+- [[2026-06-25 - Codex 插件 AI-Canvas 全能無限畫布發布]]
+- [[2026-06-23 - Page Agent 以自然語言操作網頁 GUI]]
+- [[2026-06-16 - Ponytail 先審查再寫碼的 AI 編程插件]]
 - [[2026-05-31 - 使用指南：在專案中導入 dotnet-testing Agent Orchestration（v2.0.0）]]
 - [[2026-05-30 - Obsidian Digital Garden 建站插件]]
 - [[2026-05-06 - ShareX 免費開源截圖工具]]
