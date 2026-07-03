@@ -11,10 +11,14 @@
             "id": "0d919fcdb549cb39",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "關聯圖檢視"
+              "type": "markdown",
+              "state": {
+                "file": "Clippings/R-2026-07-03 非设计背景，如何用Codex做高级感网站？.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "R-2026-07-03 非设计背景，如何用Codex做高级感网站？"
             }
           }
         ]
@@ -49,7 +53,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "",
+                "query": "R-2026-05-31 使用指南",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -70,7 +74,8 @@
               "title": "書籤"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -191,9 +196,13 @@
   },
   "active": "0d919fcdb549cb39",
   "lastOpenFiles": [
+    "Clippings/R-2026-05-31 使用指南 — 在你的專案中導入 dotnet-testing Agent Orchestration（v2.0.0）.md",
+    "Clippings/R-2026-07-03 非设计背景，如何用Codex做高级感网站？.md",
+    "Clippings/R-2026-06-25 Codex 插件：AI-Canvas全能无限画布终极版发布！.md",
+    "Clippings/R-2026-06-24 用 6 個 Prompt 打造完整學習系統：學習階梯、20法則、費曼循環.md",
+    "Clippings/R-2026-06-23 alibabapage-agent JavaScript in-page GUI agent. Control web interfaces with natural language.md",
     "Clippings/R-2026-06-16 Post by @GitHub_Daily on X.md",
     "Clippings/R-2026-06-11 Egonex-AIUnderstand-Anything Graphs that teach  graphs that impress. Turn any code into an interactive knowledge graph you can explore, search, and ask questions about. Works with Claude Code, Codex, Cursor, Copilot, Gemini CLI, and.md",
-    "Clippings/R-2026-05-31 使用指南 — 在你的專案中導入 dotnet-testing Agent Orchestration（v2.0.0）.md",
     "Resources/Tools/2026-05-30 - Obsidian Digital Garden 建站插件.md",
     "Resources/Tools/2026-05-30 - Obsidian Digital Garden 外掛架站指南.md",
     "Resources/AI/2026-05-29 - 一人公司、零員工、AI Agents：2 個月談下超過 400 萬台幣開發合約.md",
@@ -213,10 +222,6 @@
     "Clippings/R-2026-05-21 (1) 愛好 AI 工程部落格 - 📌 善用 HTML 輸出 Markdown 給 AI 讀，HTML 給人類看Anthropic.md",
     "Clippings/R-2026-05-22 Gemini 不肯上網？用 Google AI Studio 就對了-黑暗執行緒.md",
     "Clippings/R-2026-05-20 robinliline-audio-text.md",
-    "Clippings/R-2026-05-20 (1) 最近準備在原本的 AI Agent 課程裡，完整的加上 Microsoft Agent... - ‧NET Walker 大內行者.md",
-    "Clippings/R-2026-05-20 microsoftai-agents-for-beginners 12 Lessons to Get Started Building AI Agents.md",
-    "Resources/Tools/2026-05-15 - html-anything Agent HTML 生成工具.md",
-    "Clippings/Misc/README.md",
     "Clippings/Misc",
     "Clippings/Life",
     "Clippings/Learning",

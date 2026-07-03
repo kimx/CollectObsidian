@@ -30,6 +30,7 @@ tags:
 
 - [[2026-06-16 - Ponytail 讓 AI 少寫程式碼的決策工具]]
 - [[2026-05-31 - dotnet-testing Agent Orchestration v2.0.0 使用指南]]
+- [[2026-05-31 - 使用指南：在專案中導入 dotnet-testing Agent Orchestration（v2.0.0）]]
 - [[2026-05-30 - Obsidian Digital Garden 建站插件]]
 - [[2026-05-06 - ShareX 免費開源截圖工具]]
 - [[2026-05-09 - SuperSplat 3D Gaussian Splat 編輯器]]
