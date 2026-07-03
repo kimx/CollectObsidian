@@ -24,6 +24,10 @@ SORT date DESC
 ## 最近整理
 
 
+- [[Resources/AI/2026-07-03 - 非設計背景用 Codex 打造高級感網站]]
+- [[Resources/AI/2026-06-24 - 用 6 個 Prompt 打造完整 AI 學習系統]]
+- [[Resources/Tools/2026-06-25 - Codex 插件 AI-Canvas 全能無限畫布]]
+- [[Resources/Tools/2026-06-23 - page-agent 自然語言控制網頁介面的 JS 代理工具]]
 - [[Resources/Tools/2026-06-16 - Ponytail 讓 AI 少寫程式碼的決策工具]]
 - [[Resources/Tools/2026-05-31 - dotnet-testing Agent Orchestration v2.0.0 使用指南]]
 - [[Resources/Tools/2026-05-31 - 使用指南：在專案中導入 dotnet-testing Agent Orchestration（v2.0.0）]]

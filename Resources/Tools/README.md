@@ -28,6 +28,8 @@ tags:
 
 ### 生產力工具
 
+- [[2026-06-25 - Codex 插件 AI-Canvas 全能無限畫布]]
+- [[2026-06-23 - page-agent 自然語言控制網頁介面的 JS 代理工具]]
 - [[2026-06-16 - Ponytail 讓 AI 少寫程式碼的決策工具]]
 - [[2026-05-31 - dotnet-testing Agent Orchestration v2.0.0 使用指南]]
 - [[2026-05-31 - 使用指南：在專案中導入 dotnet-testing Agent Orchestration（v2.0.0）]]
