@@ -25,6 +25,7 @@ SORT date DESC
 
 
 
+- [[Resources/Tools/2026-05-31 - 使用指南：在專案中導入 dotnet-testing Agent Orchestration（v2.0.0）]]
 - [[Resources/Tools/2026-05-30 - Obsidian Digital Garden 建站插件]]
 - [[Resources/AI/2026-05-29 - 一人公司、零員工、AI Agents：2 個月談下超過 400 萬台幣開發合約]]
 - [[Resources/AI/2026-05-27 - Taste Skill 讓 AI 產生更有質感介面]]
