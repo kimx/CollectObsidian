@@ -28,20 +28,27 @@ tags:
 
 ### 生產力工具
 
+<<<<<<< HEAD
 
 - [[2026-06-25 - Codex 插件 AI-Canvas 全能無限畫布發布]]
 - [[2026-06-23 - Page Agent 以自然語言操作網頁 GUI]]
 - [[2026-06-16 - Ponytail 先審查再寫碼的 AI 編程插件]]
+=======
+- [[2026-06-23 - alibaba page-agent 網頁自然語言控制工具]]
+- [[2026-06-16 - Ponytail 讓 AI 寫更少更好程式碼]]
+- [[2026-06-16 - Ponytail 讓 AI 少寫程式碼的決策工具]]
+- [[2026-05-31 - dotnet-testing Agent Orchestration v2.0.0 使用指南]]
+>>>>>>> origin/main
 - [[2026-05-31 - 使用指南：在專案中導入 dotnet-testing Agent Orchestration（v2.0.0）]]
 - [[2026-05-30 - Obsidian Digital Garden 建站插件]]
-- [[2026-05-06 - ShareX 免費開源截圖工具]]
-- [[2026-05-09 - SuperSplat 3D Gaussian Splat 編輯器]]
-- [[2026-05-12 - Obsidian AI 側邊欄與語義搜尋]]
-- [[2026-05-15 - html-anything Agent HTML 生成工具]]
-- [[2026-05-20 - LINE 語音轉文字 Webhook 實作]]
-- [[2026-05-22 - Google AI Studio 網頁讀取實測]]
-- [[2026-05-23 - Docker 從入門到實踐]]
 - [[2026-05-27 - CodeGraph 降低 AI 寫程式 Token 消耗]]
+- [[2026-05-23 - Docker 從入門到實踐]]
+- [[2026-05-22 - Google AI Studio 網頁讀取實測]]
+- [[2026-05-20 - LINE 語音轉文字 Webhook 實作]]
+- [[2026-05-15 - html-anything Agent HTML 生成工具]]
+- [[2026-05-12 - Obsidian AI 側邊欄與語義搜尋]]
+- [[2026-05-09 - SuperSplat 3D Gaussian Splat 編輯器]]
+- [[2026-05-06 - ShareX 免費開源截圖工具]]
 
 ## AI 協作提示
 
