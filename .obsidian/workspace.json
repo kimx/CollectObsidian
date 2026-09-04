@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Clippings/R-2026-07-03 非设计背景，如何用Codex做高级感网站？.md",
+                "file": "Clippings/R-2026-09-02 不看生成的程式碼，Clean Code 之父怎麼管 AI 代理？Uncle Bob 開源 swarm-forge.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "R-2026-07-03 非设计背景，如何用Codex做高级感网站？"
+              "title": "R-2026-09-02 不看生成的程式碼，Clean Code 之父怎麼管 AI 代理？Uncle Bob 開源 swarm-forge"
             }
           }
         ]
@@ -41,7 +41,9 @@
               "type": "file-explorer",
               "state": {
                 "sortOrder": "alphabetical",
-                "autoReveal": false
+                "autoReveal": false,
+                "showSearch": false,
+                "searchQuery": ""
               },
               "icon": "lucide-folder-closed",
               "title": "檔案瀏覽器"
@@ -53,7 +55,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "R-2026-05-31 使用指南",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -74,8 +76,7 @@
               "title": "書籤"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -156,31 +157,21 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Resources/README.md",
+                "file": "Clippings/R-2026-09-02 不看生成的程式碼，Clean Code 之父怎麼管 AI 代理？Uncle Bob 開源 swarm-forge.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "README 的大綱"
-            }
-          },
-          {
-            "id": "93ec4081413d1a7b",
-            "type": "leaf",
-            "state": {
-              "type": "git-view",
-              "state": {},
-              "icon": "git-pull-request",
-              "title": "Source Control"
+              "title": "大綱"
             }
           }
         ],
-        "currentTab": 5
+        "currentTab": 4
       }
     ],
     "direction": "horizontal",
-    "width": 539.5
+    "width": 361.833251953125
   },
   "left-ribbon": {
     "hiddenItems": {
@@ -190,14 +181,28 @@
       "daily-notes:開啟今天的每日筆記": false,
       "templates:插入模板": false,
       "command-palette:開啟命令面板": false,
-      "bases:建立新的 base": false,
-      "obsidian-git:Open Git source control": false
+      "bases:建立新的 base": false
     }
   },
-  "active": "0d919fcdb549cb39",
+  "active": "e6c7a901a873e8e7",
   "lastOpenFiles": [
-    "Clippings/R-2026-05-31 使用指南 — 在你的專案中導入 dotnet-testing Agent Orchestration（v2.0.0）.md",
+    "Clippings/R-2026-07-27 AI 做的網頁總是很醜？這專案收錄 73 個品牌 DESIGN.md，GitHub 爆紅摘 10 萬星.md",
+    "Clippings/R-2026-09-02 不看生成的程式碼，Clean Code 之父怎麼管 AI 代理？Uncle Bob 開源 swarm-forge.md",
+    "Clippings/R-2026-07-25 Post by @GitHub_Daily on X.md",
+    "Resources/AI/2026-05-27 - Codex 一手包辦辦公流程自動化.md",
+    "Clippings/R-2026-07-10 AI 做的網頁總是很醜？這專案收錄 73 個品牌 DESIGN.md，GitHub 爆紅摘 10 萬星.md",
+    "Clippings/R-2026-07-09 X 上的 智享：「阿里又整了个离谱项目，直接把向量数据库干成了 SQLite 的极简级别！以后搞本地大模型和 RAG 再也不用折腾起后端服务了，懂的都懂。  这个叫 Zvec 的开源项目，挂在 Alibaba 名下已经斩获 1.3 万多星，采用完全免费的 Apache-2.0 httpst.co3AQNRTmLpt」.md",
+    "Clippings/R-2026-07-09 cclanklanshu-animated-architecture-diagram Premium hand-drawn animated architecture diagram Codex skill.md",
+    "Clippings/R-2026-07-07 建立第二大腦！用 LLM 把你收藏的文章，自動變成一座可查詢的知識庫.md",
     "Clippings/R-2026-07-03 非设计背景，如何用Codex做高级感网站？.md",
+    "Resources/Tools/2026-06-25 - Codex 插件 AI-Canvas 全能無限畫布.md",
+    "Resources/Tools/2026-06-23 - page-agent 自然語言控制網頁介面的 JS 代理工具.md",
+    "Resources/Tools/2026-06-16 - Ponytail 讓 AI 少寫程式碼的決策工具.md",
+    "Resources/Tools/2026-05-31 - 使用指南：在專案中導入 dotnet-testing Agent Orchestration（v2.0.0）.md",
+    "Resources/Tools/2026-05-31 - dotnet-testing Agent Orchestration v2.0.0 使用指南.md",
+    "Resources/AI/2026-07-03 - 非設計背景用 Codex 打造高級感網站.md",
+    "Resources/AI/2026-06-24 - 用 6 個 Prompt 打造完整 AI 學習系統.md",
+    "Clippings/R-2026-05-31 使用指南 — 在你的專案中導入 dotnet-testing Agent Orchestration（v2.0.0）.md",
     "Clippings/R-2026-06-25 Codex 插件：AI-Canvas全能无限画布终极版发布！.md",
     "Clippings/R-2026-06-24 用 6 個 Prompt 打造完整學習系統：學習階梯、20法則、費曼循環.md",
     "Clippings/R-2026-06-23 alibabapage-agent JavaScript in-page GUI agent. Control web interfaces with natural language.md",
@@ -207,21 +212,6 @@
     "Resources/Tools/2026-05-30 - Obsidian Digital Garden 外掛架站指南.md",
     "Resources/AI/2026-05-29 - 一人公司、零員工、AI Agents：2 個月談下超過 400 萬台幣開發合約.md",
     "Clippings/R-2026-05-29 一人公司、零員工、AI Agents： 2 個月談下超過 400 萬台幣開發合約.md",
-    "Clippings/R-2026-05-30 oleeskildobsidian-digital-garden.md",
-    "Clippings/R-2026-05-27 CodeGraph - AI 寫程式省80% Token 的好東東.md",
-    "Resources/Tools/2026-05-27 - CodeGraph 降低 AI 寫程式 Token 消耗.md",
-    "Resources/AI/2026-05-27 - Taste-Skill 提升 AI 介面設計品味.md",
-    "Resources/AI/2026-05-27 - Taste Skill 讓 AI 產生更有質感介面.md",
-    "Clippings/R-2026-05-27 Leonxlnxtaste-skill Taste-Skill - gives your AI good taste. stops the AI from generating boring, generic slop.md",
-    "conflict-files-obsidian-git.md",
-    "Resources/Tools/2026-05-23 - Docker 從入門到實踐.md",
-    "Resources/AI/2026-05-27 - Codex 一手包辦辦公流程自動化.md",
-    "Clippings/R-2026-05-23 Docker 從入門到實踐 - Docker 從入門到實踐.md",
-    "Clippings/R-2026-05-27 一個 AI 助手打趴整套 Office 軟體！超強 Codex 從表格簡報、合併列印、架設網站全部一手包辦！.md",
-    "Clippings/R-2026-05-22 Anthropic想租用微軟Maia 200晶片群！扛著3,300億鎂帳單，不把算力全押Nvidia.md",
-    "Clippings/R-2026-05-21 (1) 愛好 AI 工程部落格 - 📌 善用 HTML 輸出 Markdown 給 AI 讀，HTML 給人類看Anthropic.md",
-    "Clippings/R-2026-05-22 Gemini 不肯上網？用 Google AI Studio 就對了-黑暗執行緒.md",
-    "Clippings/R-2026-05-20 robinliline-audio-text.md",
     "Clippings/Misc",
     "Clippings/Life",
     "Clippings/Learning",
